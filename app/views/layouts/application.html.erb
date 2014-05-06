@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ska</title>
+  <title>Welcome to Ska!</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <a href="#" class="navbar-brand">Ska</a>
+      <ul class="nav navbar-nav">
+        <li><%= link_to "All Statuses", statuses_path %></li>
+        <li><%= link_to "New Status", statuses_path %></li>
+        <li><%= link_to "Profile", statuses_path %></li>
+        <li><%= link_to "Friends", statuses_path %></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container">
+        <%= yield %>
+  </div>
 
 </body>
 </html>
